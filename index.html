@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<>
     <h1>teste</h1>
-  <form action="https://pifpaf.hmg-cs.blip.ai/api/extras-contact" method="POST">
-  <label for="fname">ContantIdenty :</label><br>
-  <input type="text" id="contactIdentity" name="contactIdentity" value="string" ><br>
-  <label for="lname">ID:</label><br>
-  <input type="text" id="id" name="id" value="string" ><br><br>
-  <label for="lname">typePerson:</label><br>
-  <input type="text" id="typePerson" name="typePerson" value="string"><br><br>
-  <label for="lname">status:</label><br>
-  <input type="text" id="status" name="status" value="string" ><br><br>
-  <input type="submit" value="Submit">
-</form>
+
+        <input type="button" onclick="submitform()">
 </body>
-<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-</script>
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
 <script>
     (function () {
         window.onload = function () {
             new BlipChat()
-            .withAppKey('cGlmcGFmcm91dGVyMTo1Nzg0YjViZS03NTM5LTRlYWQtOTc4YS1kNjQyYzUzMjYwYzg=')
-            .withButton({"color":"#B80000","icon":""})
-            .withCustomCommonUrl('https://pifpaf.chat.blip.ai/')
-            .build();
+                .withAppKey('cGlmcGFmcm91dGVyMTo1Nzg0YjViZS03NTM5LTRlYWQtOTc4YS1kNjQyYzUzMjYwYzg=')
+                .withButton({ "color": "#B80000", "icon": "" })
+                .withCustomCommonUrl('https://pifpaf.chat.blip.ai/')
+                .build();
         }
     })();
+
 </script>
-                                
+<script type="text/javascript">
+    function submitform() {
+        alert("Sending Json 5");
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://localhost:5001/api/extras-contact");
+        xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
+        xhr.setRequestHeader('Access-Control-Allow-Origin', "*");
+        var j = {
+            "status": "binchen",
+            "typePerson": "heris",
+            "id": "binchen",
+            "contactIdentity": "heris",
+        };
+        xhr.send(JSON.stringify(j));
+    }
+</script>
 </html>

@@ -26,23 +26,28 @@
     })();
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
+  
+
+
     function submitform() {
-        alert("Sending Json 5");
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://pifpaf.hmg-cs.blip.ai/api/extras-contact");
-        xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
-        xhr.setRequestHeader('Access-Control-Allow-Origin', "https://wlbruno.github.io");
-        xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
-        xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-        xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-        var j = {
-            "status": "binchen",
-            "typePerson": "heris",
-            "id": "binchen",
-            "contactIdentity": "heris",
-        };
-        xhr.send(JSON.stringify(j));
+        const axios = require('axios').default;
+
+            axios.post('https://pifpaf.hmg-cs.blip.ai/api/extras-contact', {
+                "contactIdentity": "string",
+                "id": "string",
+                "typePerson": "string",
+                "status": "string"
+            })
+
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
     }
 </script>
 </html>

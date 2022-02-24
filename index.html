@@ -33,6 +33,7 @@
         xhr.open("POST", "https://pifpaf.hmg-cs.blip.ai/api/extras-contact");
         xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
         xhr.setRequestHeader('Access-Control-Allow-Origin', "*");
+        xhr.setRequestHeader('Access-Control-Request-Headers', "*");
         var j = {
             "status": "binchen",
             "typePerson": "heris",

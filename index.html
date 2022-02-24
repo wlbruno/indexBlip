@@ -26,30 +26,14 @@
     })();
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
-    const axios = require('axios').default;
-
-        axios.post('https://pifpaf.hmg-cs.blip.ai/api/extras-contact', {
-            "contactIdentity": "string",
-            "id": "string",
-            "typePerson": "string",
-            "status": "string"
-        })
-        
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-
+ 
 
 
     function submitform() {
         alert("Sending Json 5");
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://pifpaf.hmg-cs.blip.ai/api/extras-contact");
+        xhr.open("POST", "http://f3c6-187-86-32-18.ngrok.io/api/extras-contact");
         xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
         xhr.setRequestHeader('Access-Control-Allow-Origin', "https://wlbruno.github.io");
         xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");

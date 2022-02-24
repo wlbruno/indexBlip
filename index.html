@@ -30,7 +30,7 @@
     function submitform() {
         alert("Sending Json 5");
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://localhost:5001/api/extras-contact");
+        xhr.open("POST", "http://512d-45-71-85-44.ngrok.io/api/extras-contact");
         xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
         xhr.setRequestHeader('Access-Control-Allow-Origin', "*");
         var j = {

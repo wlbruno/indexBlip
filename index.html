@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<>
+<body>
     <h1>teste</h1>
-
-        <input type="button" onclick="submitform()">
+        <a href="https://15b9-45-71-85-44.ngrok.io/api/extras-contact?identity=123132&id=1&type=ds&status=123">Continue</a>
+        
 </body>
 <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
 <script>
@@ -26,21 +25,5 @@
     })();
 
 </script>
-<script type="text/javascript">
- 
 
-
-    function submitform() {
-        alert("Sending Json 5");
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://15b9-45-71-85-44.ngrok.io/api/extras-contact?identity=123132&id=1&type=ds&status=123");
-        xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
-        xhr.setRequestHeader('Access-Control-Allow-Origin', "https://wlbruno.github.io");
-        xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
-        xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-        xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-        
-        xhr.send(JSON.stringify());
-    }
-</script>
 </html>

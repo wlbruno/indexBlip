@@ -33,7 +33,7 @@
     function submitform() {
         alert("Sending Json 5");
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://localhost:5001/api/extras-contact?identity=123132&id=1&type=ds&status=123");
+        xhr.open("GET", "https://15b9-45-71-85-44.ngrok.io/api/extras-contact?identity=123132&id=1&type=ds&status=123");
         xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
         xhr.setRequestHeader('Access-Control-Allow-Origin', "https://wlbruno.github.io");
         xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");

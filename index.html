@@ -33,19 +33,14 @@
     function submitform() {
         alert("Sending Json 5");
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://ce03-45-232-250-61.ngrok.io/api/extras-contact");
+        xhr.open("GET", "https://localhost:5001/api/extras-contact?identity=123132&id=1&type=ds&status=123");
         xhr.setRequestHeader('Content-Type', 'application/json-patch+json');
         xhr.setRequestHeader('Access-Control-Allow-Origin', "https://wlbruno.github.io");
         xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
         xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
         xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-        var j = {
-            "status": "binchen",
-            "typePerson": "heris",
-            "id": "binchen",
-            "contactIdentity": "heris",
-        };
-        xhr.send(JSON.stringify(j));
+        
+        xhr.send(JSON.stringify());
     }
 </script>
 </html>
